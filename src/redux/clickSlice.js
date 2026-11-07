@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import storage from 'redux-persist/es/storage';
 
 
 export const clickSlice = createSlice({
     name: "clicks",
     initialState: {
-        value: 0
+    value: 0
     },
     reducers: {
         update: (state, action) => {
@@ -22,4 +22,7 @@ const persistConfig = {
 }
 
 export const clicksReducer = persistReducer(persistConfig, clickSlice.reducer) 
- 
+
+export const {update} = clickSlice.actions
+
+export const getClicksValue = state => state.clicks.value

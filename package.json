@@ -1,5 +1,5 @@
 {
-  "name": "rtk_redux_tool_kit",
+  "name": "redux-persist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
